@@ -1,5 +1,5 @@
 const js = require("@eslint/js");
-import globals from "globals";
+const globals = require("globals");
 
 export default [
   js.configs.recommended,
