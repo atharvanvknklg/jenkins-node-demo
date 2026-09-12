@@ -1,4 +1,4 @@
-import js from "@eslint/js";
+const js = require("@eslint/js");
 import globals from "globals";
 
 export default [
