@@ -51,6 +51,10 @@ app.get("/api/divide" ,(req,res)=>{
         });
     }
 
+    return res.json({
+        result:divide(a,b)
+    })
+
    
 })
 
