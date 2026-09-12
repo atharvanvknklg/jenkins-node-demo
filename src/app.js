@@ -1,5 +1,5 @@
 const express = require("express");
-const { add, multiply } = require("./math");
+const { add, multiply , divide } = require("./math");
 
 const app = express();
 
@@ -40,5 +40,18 @@ app.get("/api/multiply", (req, res) => {
         result:  multiply(a, b)
     });
 });
+
+app.get("/api/divide" ,(req,res)=>{
+    const a = Number(req.query.a);
+    const b = Number(req.query.b);
+
+     if (!Number.isFinite(a) || !Number.isFinite(b) || b == 0) {
+        return res.status(400).json({
+            error: "a and b must be valid numbers"
+        });
+    }
+
+   
+})
 
 module.exports = app;
